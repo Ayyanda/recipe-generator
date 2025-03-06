@@ -9,21 +9,24 @@ def generate_ingredients():
 
     while True:
         try:
-            ingredient = input("Enter the ingredients you have ").strip().lower()
-            if ingredient.lower() == "finished":
+            ingredient = input("Enter the ingredients you have (type 'finished' when done): ").strip().lower()
+
+            if ingredient == "finished":
                 break
 
-            ingredients.append(ingredient)
+            if ingredient:
+                ingredients.append(ingredient)
+            else:
+                print("Please enter a valid ingredient.")
 
-            
         except EOFError:
             break
 
-    return ingredients
-            
-        
+    ingredients_available= ",".join(ingredients)
+    return ingredients_available
 
+def main():
+    ingredients_available= generate_ingredients()
+    print("Ingredients available:", ingredients_available)
 
-        
-
-    
+main()
