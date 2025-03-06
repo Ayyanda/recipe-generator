@@ -33,11 +33,23 @@ def get_recipes(ingredients_available):
     }
 
     response = requests.get("https://api.spoonacular.com/recipes/complexsearch", params = parameters)
-    
+    if response.status_code == 200:
+        recipes = response.json()
+        return recipes
+    else:
+        print("There was an error fetcthing recipe:", response.status_code)
+        return None
+
     
 
 def main():
     ingredients_available= generate_ingredients()
     print("Ingredients available:", ingredients_available)
+
+    recipes = get_recipes(ingredients_available)
+
+    if recipes:
+        for recipe in recipes:
+            print(recipe['title'])
 
 main()
