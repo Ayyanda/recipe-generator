@@ -56,7 +56,7 @@ The free tier of the Spoonacular API has 60 requests per minute request limits.
 
 ## Future Improvements
 
--Have a 'quick recipes' option(microwave recipes and 5-10 min recipes)
+- Have a 'quick recipes' option(microwave recipes and 5-10 min recipes)
 - Save favorite recipes
 - Filter recipes by dietary restrictions
 - Add error logging
