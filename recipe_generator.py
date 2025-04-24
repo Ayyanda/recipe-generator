@@ -1,6 +1,5 @@
 import requests
 
-# Your API key
 API_KEY = "47c8a1a57ba24939bb25b2357340f3e3"
 
 def generate_ingredients():
