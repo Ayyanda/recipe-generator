@@ -150,6 +150,6 @@ def main():
     else:
         print("No recipes found with those ingredients or there was an API error.")
 
-# Run the program
+
 if __name__ == "__main__":
     main()
