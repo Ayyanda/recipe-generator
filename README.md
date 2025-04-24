@@ -62,5 +62,4 @@ The free tier of the Spoonacular API has 60 requests per minute request limits.
 - Add error logging
 - Implement a graphical user interface
 
-
 - Recipe data provided by [Spoonacular API](https://spoonacular.com/food-api)
