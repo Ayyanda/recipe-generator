@@ -2,7 +2,7 @@
 
 import requests
 
-API_KEY = "47c8a1a57ba24939bb25b2357340f3e3"
+API_KEY = ""
 
 def get_recipes(ingredients_available):
     """This function gets recipes based on ingredients"""
