@@ -9,6 +9,19 @@ def main():
 
     print("Welcome to DishWhiz!")
     print("-" * 30)
+
+    print("What kind of recipes would you like today? :")
+    print("1. Normal / fancy")
+    print("2. South African cuisine")
+    print("3. Quick 5-minutes recipes")
+
+    choice = input("Enter the number of your choice: ").strip()
+
+    recipe_type = "general"
+    if choice == "2":
+        recipe_type = "south_african"
+    elif choice == "3":
+        recipe_type = "5-minutes"
     
     ingredients_available = generate_ingredients()
     print("Ingredients available:", ingredients_available)
