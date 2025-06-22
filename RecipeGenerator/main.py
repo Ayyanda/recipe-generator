@@ -21,43 +21,60 @@ def main():
     if choice == "2":
         recipe_type = "south_african"
     elif choice == "3":
-        recipe_type = "5-minutes"
+        recipe_type = "quick"
+
+    print("\nEnter your ingredients one by one (type 'finished' when done):")
+    ingredients_available = []
+
+    while True:
+        item = input("Ingredient: ")
+        if item.lower():
+            break
+        ingredients_available.append(item.strip())
+
+
     
-    ingredients_available = generate_ingredients()
-    print("Ingredients available:", ingredients_available)
+    # ingredients_available = generate_ingredients()
+    # print("Ingredients available:", ingredients_available)
 
     if not ingredients_available:
         print("No ingredients entered. Exiting program.")
         return
         
-    recipes = get_recipes(ingredients_available, recipe_type)
+    response = get_recipes(ingredients_available, recipe_type)
 
-    if show_recipe_list(recipes):
-        while True:
-            try:
-                choice = input("\nEnter the number of the recipe you want to see (or type 'exit'): ")
+    if response:
+        print("\n Here are some recipe ideas:\n")
+        print(response)
+    else:
+        print("Sorry something went wrong")
+
+#     if show_recipe_list(recipes):
+#         while True:
+#             try:
+#                 choice = input("\nEnter the number of the recipe you want to see (or type 'exit'): ")
                 
-                if choice.lower() == 'exit':
-                    break
+#                 if choice.lower() == 'exit':
+#                     break
                     
-                recipe_index = int(choice) - 1
+#                 recipe_index = int(choice) - 1
                 
-                if 0 <= recipe_index < len(recipes):
-                    selected_recipe = recipes[recipe_index]
-                    recipe_id = selected_recipe['id']
+#                 if 0 <= recipe_index < len(recipes):
+#                     selected_recipe = recipes[recipe_index]
+#                     recipe_id = selected_recipe['id']
                     
-                    print(f"\nGetting instructions for {selected_recipe['title']}...")
-                    recipe_details = get_recipe_instructions(recipe_id)
+#                     print(f"\nGetting instructions for {selected_recipe['title']}...")
+#                     recipe_details = get_recipe_instructions(recipe_id)
                     
-                    if show_recipe_details(recipe_details):
-                        print("\nThank you for using DishWhiz!")
-                        break
-                    else:
-                        print("Please try another recipe.")
-                else:
-                    print("Invalid recipe number. Please try again.")
-            except ValueError:
-                print("Please enter a valid number or 'exit'.")
+#                     if show_recipe_details(recipe_details):
+#                         print("\nThank you for using DishWhiz!")
+#                         break
+#                     else:
+#                         print("Please try another recipe.")
+#                 else:
+#                     print("Invalid recipe number. Please try again.")
+#             except ValueError:
+#                 print("Please enter a valid number or 'exit'.")
 
 if __name__ == "__main__":
     main()
