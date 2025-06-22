@@ -1,7 +1,7 @@
 # This is the main entry point for the program
 
 from ingredients import generate_ingredients
-from API_handler import get_recipes, get_recipe_instructions
+from RecipeGenerator.AI_handler import get_recipes, get_recipe_instructions
 from display import show_recipe_list, show_recipe_details
 
 def main():
