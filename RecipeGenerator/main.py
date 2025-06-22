@@ -30,7 +30,7 @@ def main():
         print("No ingredients entered. Exiting program.")
         return
         
-    recipes = get_recipes(ingredients_available)
+    recipes = get_recipes(ingredients_available, recipe_type)
 
     if show_recipe_list(recipes):
         while True:
