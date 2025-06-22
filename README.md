@@ -61,5 +61,6 @@ The free tier of the Spoonacular API has 60 requests per minute request limits.
 - Filter recipes by dietary restrictions
 - Add error logging
 - Implement a graphical user interface
+- Implement African traditional recipes for African dishes
 
 - Recipe data provided by [Spoonacular API](https://spoonacular.com/food-api)

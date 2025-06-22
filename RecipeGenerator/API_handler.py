@@ -4,16 +4,25 @@ import requests
 
 API_KEY = "47c8a1a57ba24939bb25b2357340f3e3"
 
-def get_recipes(ingredients_available):
+def get_recipes(ingredients_available, recipe_type ="general"):
     """This function gets recipes based on ingredients"""
+
+    print(f"\nFinding {recipe_type} recipes...")
     
     parameters = {
-        "ingredients": ingredients_available,
+        "includeIngredients": ingredients_available,
         "number": 5,  
         "apiKey": API_KEY  
     }
 
+    #filtering based on user choice
+    if recipe_type == "south_african":
+        parameters["cuisine"] = "South African"
+    elif recipe_type == "5-minutes":
+        parameters["maxReadyTime"] = 5
+
     print("Getting your recipes...")
+
     try:
         response = requests.get(
             "https://api.spoonacular.com/recipes/findByIngredients", 
