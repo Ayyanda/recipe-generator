@@ -14,12 +14,11 @@ def generate_ingredients():
                 break
 
             if ingredient:
-                ingredients.append(ingredient)
+                ingredients.extend([i.strip() for i in ingredient.split(",") if i.strip()])
             else:
                 print("Please enter a valid ingredient.")
 
         except EOFError:
             break
 
-    ingredients_available = ",".join(ingredients)
-    return ingredients_available
+    return ingredients
