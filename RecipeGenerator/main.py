@@ -27,15 +27,12 @@ def main():
     ingredients_available = []
 
     while True:
-        item = input("Ingredient: ")
-        if item.lower():
+        item = input("Ingredient: ").strip()
+        if item.lower()=="finished":
             break
-        ingredients_available.append(item.strip())
+        if item:
+            ingredients_available.append(item.lower())
 
-
-    
-    # ingredients_available = generate_ingredients()
-    # print("Ingredients available:", ingredients_available)
 
     if not ingredients_available:
         print("No ingredients entered. Exiting program.")
