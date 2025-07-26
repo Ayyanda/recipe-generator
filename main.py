@@ -6,20 +6,21 @@ def main():
     """Main function to run the recipe generator"""
 
     print("Welcome to DishWhiz!")
-    print("-" * 30)
+    print("=" * 50)
 
     print("What kind of recipes would you like today? :")
-    print("1. Normal / fancy")
+    print("1. Normal recipe")
     print("2. South African cuisine")
     print("3. Quick 5-minutes recipes")
 
     choice = input("Enter the number of your choice: ").strip()
 
-    recipe_type = "general"
     if choice == "2":
         recipe_type = "south_african"
     elif choice == "3":
-        recipe_type = "quick"
+        recipe_type = "Quick 5 minutes recipes"
+    else:
+        recipe_type = "Normal recipe"
 
     print("\nEnter your ingredients one by one (type 'finished' when done):")
     ingredients_available = []
