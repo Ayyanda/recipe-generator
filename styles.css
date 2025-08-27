@@ -1,0 +1,190 @@
+:root {
+  --font-family: 'Inria Sans', sans-serif;
+  --white: #fff;
+  --light-gray: #f5f5f5;
+  --purple: rgba(70, 3, 70, 0.88);
+  --gradient-bg: linear-gradient(135deg, #700570, #D60AD6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--gradient-bg);
+  color: var(--white);
+  min-height: 100vh;
+  position: relative;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  z-index: 10;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 64px;
+  height: auto;
+}
+
+.tagline {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-family: var(--font-family);
+  white-space: nowrap;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-section {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.headline {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--purple);
+  color: var(--light-gray);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: var(--purple); 
+ border: 2px solid var(--purple);
+}
+
+/* === RIGHT SECTION IMAGE GRID === */
+.right-section .img {
+  display: grid;
+  grid-template-areas: 
+    "biryani noodles"
+    "biryani fries"
+    "pasta pasta";
+  gap: 16px;
+  height: 100%;
+}
+
+/* Assign grid areas to each image */
+.spicy-dum-biryani-2 {
+  grid-area: biryani;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.node-4 {
+  grid-area: noodles;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.node-5 {
+  grid-area: fries;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.node-6 {
+  grid-area: pasta;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  .site-header {
+    top: 12px;
+    left: 16px;
+  }
+
+  .branding {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .logo {
+    width: 48px;
+  }
+
+  .tagline {
+    font-size: 12px;
+    max-width: 160px;
+    line-height: 1.2;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+
+  .right-section {
+    order: -1;
+  }
+
+  .right-section .img {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .headline {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 40px;
+  }
+}
