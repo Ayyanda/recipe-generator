@@ -36,14 +36,16 @@ def main():
     if not ingredients_available:
         print("No ingredients entered. Exiting program.")
         return
-        
+
+    print("\nGenerating recipes... Please wait.\n")
+   
     response = get_recipes(ingredients_available, recipe_type)
 
     if response:
         print("\n Here are some recipe ideas:\n")
         print(response)
     else:
-        print("Sorry something went wrong")
+        print("Sorry we couldn't generate your recipes at the moment")
 
 
 if __name__ == "__main__":
