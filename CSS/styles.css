@@ -142,7 +142,7 @@ body {
   flex-wrap: wrap;
   max-width: 1000px;
   width: 100%;
-  gap: 32px;
+  gap: 64px;
   align-items: center;
   justify-content: center;
 }
@@ -153,13 +153,31 @@ body {
 }
 
 .headline {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1.2;
+  text-align: center;
   margin-bottom: 24px;
 }
 
+.headline-top,
+.headline-bottom {
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.headline-bottom {
+  font-size: 45px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: var(--light-gray); 
+}
+
+
+
+
 .cta-button {
+  margin-top: 32px;
   display: inline-block;
   background-color: var(--purple);
   color: var(--light-gray);
@@ -177,7 +195,6 @@ body {
  border: 2px solid var(--purple);
 }
 
-/* === RIGHT SECTION IMAGE GRID === */
 .right-section .img {
   display: grid;
   grid-template-areas: 
@@ -188,7 +205,6 @@ body {
   height: 100%;
 }
 
-/* Assign grid areas to each image */
 .spicy-dum-biryani-2 {
   grid-area: biryani;
   width: 100%;
@@ -222,7 +238,6 @@ body {
 }
 
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   body {
     padding: 16px;

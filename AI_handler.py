@@ -15,7 +15,7 @@ def build_prompt(ingredients_available, recipe_type):
     else:
         prompt += "Please give me 3 delicious recipes using these ingredients."
     
-    context = "You are a helpful recipe generator that takes in ingredients from users as input and returns 3 recipe options with preparation steps in a markdown format"
+    context = "You are a helpful recipe generator that takes in ingredients from users as input and returns 3 recipe options in UK metrics with preparation steps in a markdown format"
  
     return prompt, context
     
@@ -24,7 +24,7 @@ def build_prompt(ingredients_available, recipe_type):
 def get_recipes(ingredients_available, recipe_type="general"):
     """Fetches recipes from the AI model based on the provided ingredients and recipe type."""
 
-    api_key = ""
+    api_key = "4fa3f6feba0tbab012745e9cboe2d96a"
     base_url = "https://api.shecodes.io/ai/v1/generate?prompt={prompt}&context={context}&key={key}"
 
     prompt, context = build_prompt(ingredients_available,recipe_type)
@@ -35,7 +35,6 @@ def get_recipes(ingredients_available, recipe_type="general"):
         "assistant_context" : context
     }
 
-    
     try:
         response = requests.get(base_url, params=params)
         response.raise_for_status()
