@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="/CSS/ai-page.css">
+
+</head>
+<body>
+    <div class="recipe-container">
+        <h1>DishWhiz</h1>
+
+        <div class="section">
+            <label class="label">What type of recipe are you looking for?</label>
+            <div class="tiles" id="recipe-types">
+                <div class="tile">South African cuisine</div>
+                <div class="tile">Normal recipe</div>
+                <div class="tile">Quick recipe</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <label class="label">Enter your ingredients:</label>
+            <div class="ingredient-box" id="ingredient-box">
+                <input type="text" class="ingredient-input" id="ingredient-input" placeholder="Type an ingredient and press Enter">
+            </div>
+        </div>
+
+        <button class="generate-btn" id="generate-btn" disabled>Generate Recipes</button>
+    </div>
+
+    <!-- <script src="generator.js"></script> -->
+</body>
+</html>
