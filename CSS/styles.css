@@ -6,6 +6,7 @@
   --gradient-bg: linear-gradient( #700570, #D60AD6);
   --background: linear-gradient(to bottom, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%);
   --nav-test: purple; 
+  --image: url('../Assets/images/purple food.jpeg')
 }
 
 * {
@@ -16,7 +17,8 @@
 
 body {
   font-family: var(--font-family);
-  background: var(--background);
+  background-image: var(--image);
+  background-size: cover;
   color: var(--white);
   min-height: 100vh;
   position: relative;
@@ -196,7 +198,7 @@ body {
 }
 
 .right-section .img {
-  display: grid;
+  display: flex;
   grid-template-areas: 
     "biryani noodles"
     "biryani fries"
