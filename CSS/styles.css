@@ -6,7 +6,7 @@
   --gradient-bg: linear-gradient( #700570, #D60AD6);
   --background: linear-gradient(to bottom, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%);
   --nav-test: purple; 
-  --image: url('../Assets/images/purple food.jpeg')
+  --image: url('../Assets/images/other.jpeg')
 }
 
 * {

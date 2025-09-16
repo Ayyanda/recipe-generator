@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Generator</title>
-    <link rel="stylesheet" href="/CSS/ai-page.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DishWhiz</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/ai-page.css">
 </head>
 <body>
-    <div class="recipe-container">
-        <h1>DishWhiz</h1>
+  <div class="container">
 
-        <div class="section">
-            <label class="label">What type of recipe are you looking for?</label>
-            <div class="tiles" id="recipe-types">
-                <div class="tile">South African cuisine</div>
-                <div class="tile">Normal recipe</div>
-                <div class="tile">Quick recipe</div>
-            </div>
-        </div>
+    <section class="header">
+      <h1 class="logo">DishWhiz</h1>
+      <h2 class="subtitle">What type of recipe are you looking for today?</h2>
+    </section>
 
-        <div class="section">
-            <label class="label">Enter your ingredients:</label>
-            <div class="ingredient-box" id="ingredient-box">
-                <input type="text" class="ingredient-input" id="ingredient-input" placeholder="Type an ingredient and press Enter">
-            </div>
-        </div>
+    <section class="recipe-types">
+      <button class="recipe-btn">South Africa Cuisine</button>
+      <button class="recipe-btn">Normal Recipe</button>
+      <button class="recipe-btn">Quick Recipe</button>
+    </section>
 
-        <button class="generate-btn" id="generate-btn" disabled>Generate Recipes</button>
-    </div>
+    <section class="ingredients">
+      <span class="ingredient">Tomatoes</span>
+      <span class="ingredient">Rice</span>
+      <span class="ingredient">Onions</span>
+      <span class="ingredient">Beef</span>
+      <span class="ingredient">Salt</span>
+    </section>
 
-    <!-- <script src="generator.js"></script> -->
+    <section class="input-box">
+      <input type="text" placeholder="Type an ingredient and press Enter">
+      <button class="input-btn">↑</button>
+    </section>
+
+    <section class="action">
+      <button class="generate-btn">Generate Recipes</button>
+    </section>
+
+  </div>
 </body>
 </html>
