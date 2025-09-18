@@ -6,7 +6,7 @@
   --gradient-bg: linear-gradient( #700570, #D60AD6);
   --background: linear-gradient(to bottom, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%);
   --nav-test: purple; 
-  --image: url('../Assets/images/other.jpeg')
+  --image: url('../Assets/images/plate and utensils.jpeg')
 }
 
 * {
@@ -17,9 +17,11 @@
 
 body {
   font-family: var(--font-family);
-  background-image: var(--image);
-  background-size: cover;
-  color: var(--white);
+  background-image: var(--image) ;
+  background-size:contain ;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--light-gray);
   min-height: 100vh;
   position: relative;
   padding: 24px;
@@ -155,7 +157,7 @@ body {
 }
 
 .headline {
-  text-align: center;
+  text-align:left;
   margin-bottom: 24px;
 }
 
@@ -165,14 +167,14 @@ body {
   font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--white);
+  color: var(--purple);
 }
 
 .headline-bottom {
   font-size: 45px;
   margin-top: 8px;
   margin-bottom: 8px;
-  color: var(--light-gray); 
+  color: var(--purple); 
 }
 
 
