@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DishWhiz</title>
   <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/CSS/ai-page.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/ai-page.css') }}">
 </head>
 <body>
   <div class="container">
-
     <section class="header">
       <h1 class="logo">DishWhiz</h1>
       <h2 class="subtitle">What type of recipe are you looking for today?</h2>
@@ -37,7 +36,6 @@
     <section class="action">
       <button class="generate-btn">Generate Recipes</button>
     </section>
-
   </div>
 </body>
 </html>
