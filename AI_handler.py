@@ -1,7 +1,7 @@
 # This file handles all OpenAI API communication
 
 import requests
-from dotenv import load_dotenv;
+# from dotenv import load_dotenv;
 import os;
 
 
