@@ -28,23 +28,29 @@ def get_recipes(ingredients_available, recipe_type="general"):
     """Fetches recipes from the AI model based on the provided ingredients and recipe type."""
 
     api_key = os.getenv("SHECODES_API_KEY")
-    base_url = "https://api.shecodes.io/ai/v1/generate?prompt={prompt}&context={context}&key={key}"
+    
+    if not api_key:
+        print("ERROR: API key not found!")
+        return None
+        
+    base_url = "https://api.shecodes.io/ai/v1/generate"
 
-    prompt, context = build_prompt(ingredients_available,recipe_type)
+    prompt, context = build_prompt(ingredients_available, recipe_type)
 
     params = {
-        "prompt" : prompt,
-        "key" : api_key,
-        "assistant_context" : context
+        "prompt": prompt,
+        "key": api_key,
+        "assistant_context": context  
     }
 
     try:
+        print(f"Making API request with ingredients: {ingredients_available}")
         response = requests.get(base_url, params=params)
         response.raise_for_status()
         data = response.json()
+        print(f"API Response: {data}")
         return data.get("answer", "No answer returned.")
     except requests.exceptions.RequestException as e:
         print(f"API request failed: {e}")
         return None
-
 
