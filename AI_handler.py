@@ -1,9 +1,10 @@
 # This file handles all OpenAI API communication
 
 import requests
-# from dotenv import load_dotenv;
+from dotenv import load_dotenv;
 import os;
 
+load_dotenv()
 
 def build_prompt(ingredients_available, recipe_type):
     """Builds the prompt for the AI model based on user input ingredients and recipe type."""
@@ -26,8 +27,7 @@ def build_prompt(ingredients_available, recipe_type):
 def get_recipes(ingredients_available, recipe_type="general"):
     """Fetches recipes from the AI model based on the provided ingredients and recipe type."""
 
-    # load_dotenv()
-    api_key = "4fa3f6feba0tbab012745e9cboe2d96a"
+    api_key = os.getenv(api_key)
     base_url = "https://api.shecodes.io/ai/v1/generate?prompt={prompt}&context={context}&key={key}"
 
     prompt, context = build_prompt(ingredients_available,recipe_type)

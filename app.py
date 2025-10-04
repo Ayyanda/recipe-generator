@@ -3,11 +3,13 @@ from flask_cors import CORS
 from AI_handler import get_recipes
 
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 CORS(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")  
+    return render_template("index.html")
 
 @app.route("/ai")
 def ai_page():
@@ -24,10 +26,6 @@ def generate():
     
     result = get_recipes(ingredients, recipe_type)
     return jsonify(result) 
-
-@app.route("/")
-def home():
-    return "Hello, Flask is working!"
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DishWhiz</title>
+  <title>DishWhiz - Recipe Generator</title>
   <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/ai-page.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ai-page.css') }}">
 </head>
 <body>
   <div class="container">
@@ -15,27 +15,30 @@
     </section>
 
     <section class="recipe-types">
-      <button class="recipe-btn">South Africa Cuisine</button>
-      <button class="recipe-btn">Normal Recipe</button>
-      <button class="recipe-btn">Quick Recipe</button>
+      <button class="recipe-btn" data-type="South African Cuisine">South African Cuisine</button>
+      <button class="recipe-btn" data-type="Normal Recipe">Normal Recipe</button>
+      <button class="recipe-btn" data-type="Quick Recipe">Quick Recipe</button>
     </section>
 
     <section class="ingredients">
-      <span class="ingredient">Tomatoes</span>
-      <span class="ingredient">Rice</span>
-      <span class="ingredient">Onions</span>
-      <span class="ingredient">Beef</span>
-      <span class="ingredient">Salt</span>
+      <span class="ingredient decoy">Tomatoes</span>
+      <span class="ingredient decoy">Rice</span>
+      <span class="ingredient decoy">Onions</span>
+      <span class="ingredient decoy">Beef</span>
+      <span class="ingredient decoy">Salt</span>
     </section>
 
     <section class="input-box">
-      <input type="text" placeholder="Type an ingredient and press Enter">
-      <button class="input-btn">↑</button>
+      <input type="text" placeholder="Type an ingredient and press Enter" id="ingredientInput">
+      <button class="input-btn" id="addBtn">↑</button>
     </section>
 
     <section class="action">
-      <button class="generate-btn">Generate Recipes</button>
+      <button class="generate-btn" id="generateBtn">Generate Recipes</button>
+      <div class="loading" id="loading">Generating your recipes...</div>
     </section>
   </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
