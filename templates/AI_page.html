@@ -39,6 +39,20 @@
     </section>
   </div>
 
+   <div class="results-section" style="display: none;">
+  <div class="results-header">
+    <h1>Your Recipes</h1>
+    <button class="back-btn" id="backBtn">Generate Another Recipe</button>
+  </div>
+
+  <!-- ✅ Intro paragraph -->
+  <p class="intro-text" id="introText"></p>
+
+  <!-- ✅ Recipe cards container -->
+  <div class="recipe-cards" id="recipeCards"></div>
+</div>
+
+
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

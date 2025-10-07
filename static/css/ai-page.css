@@ -23,6 +23,13 @@ body {
   padding: 20px;
 }
 
+.cards-wrapper {
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   text-align: center;
   width: 100%;
@@ -193,9 +200,6 @@ body {
   display: block;
 }
 
-
-/* Add this to your ai-page.css file */
-
 /* Results Section Styling */
 .results-section {
   display: none;
@@ -365,12 +369,31 @@ body {
   }
 }
 
+.intro-text {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /* Recipe Cards Layout */
+.results-section {
+  width: 100vw;
+  padding: 2rem 0;
+  background: var(--light-gray);
+}
+
 .recipe-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 1rem;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .recipe-card {
@@ -455,8 +478,7 @@ body {
   max-height: none;
 }
 
-/* Responsive for cards */
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
   .recipe-cards {
     grid-template-columns: 1fr;
   }
@@ -490,4 +512,4 @@ body {
     width: 80%;
     font-size: 1.2rem;
   }
-} */
+}
