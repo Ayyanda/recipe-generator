@@ -163,9 +163,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const recipes = [];
   let splits = text.split(/(?:\n\s*){2,}(?=(?:\*\*)?(?:\d+\.|##|###)\s*(?:\*\*)?)/);
 
-  if (splits.length < 3) {
-    splits = text.split(/(?:\n\s*){3,}/);
-  }
+  if (splits.length < 3 || splits.some(s => s.length < 100)) {
+  splits = text.split(/(?:\n\s*){3,}/); 
+}
 
   splits.forEach((recipeText, index) => {
     const trimmed = recipeText.trim();

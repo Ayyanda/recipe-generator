@@ -22,14 +22,15 @@ def generate():
     recipe_type = data.get("recipe_type", "general")
 
     if not ingredients:
-        return jsonify({"error": "no ingredients provided"}), 400
-    
+        return jsonify({"error": "No ingredients provided"}), 400
+
     result = get_recipes(ingredients, recipe_type)
-    
+
     if result is None:
         return jsonify({"error": "Failed to generate recipes. API request failed."}), 500
-    
-    return jsonify({"answer": result}), 200
+
+    return jsonify({"answer": result}), 200 
+
 
 if __name__ == "__main__":
     app.run(debug=True)

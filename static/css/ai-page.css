@@ -17,10 +17,12 @@ body {
   background: var(--white);
   color: var(--purple);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  overflow-x:hidden ;
 }
 
 .cards-wrapper {
@@ -202,8 +204,13 @@ body {
 
 /* Results Section Styling */
 .results-section {
-  display: none;
-  animation: fadeIn 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  /* animation: fadeIn 0.6s ease; */
 }
 
 @keyframes fadeIn {
@@ -375,7 +382,7 @@ body {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  max-width: 900px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -392,8 +399,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-content: center;
   width: 100%;
+  max-width: 1200px;
   padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .recipe-card {
