@@ -6,7 +6,7 @@
   --gradient-bg: linear-gradient( #700570, #D60AD6);
   --background: linear-gradient(to bottom, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%);
   --nav-test: purple; 
-  --image: url('../static/images/plate and utensils.jpeg')
+  --image: "{{ url_for('static', filename='images/plates and utensils.jpeg') }}"
 }
 
 * {

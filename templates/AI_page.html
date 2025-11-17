@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DishWhiz - Recipe Generator</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/ai-page.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DishWhiz - Recipe Generator</title>
+<link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ai-page.css') }}">
 </head>
 <body>
-  <div class="container">
-    <section class="header">
-      <h1 class="logo">DishWhiz</h1>
-      <h2 class="subtitle">What type of recipe are you looking for today?</h2>
-    </section>
 
-    <section class="recipe-types">
-      <button class="recipe-btn" data-type="South African Cuisine">South African Cuisine</button>
-      <button class="recipe-btn" data-type="Normal Recipe">Normal Recipe</button>
-      <button class="recipe-btn" data-type="Quick Recipe">Quick Recipe</button>
-    </section>
-
-    <section class="ingredients">
-      <span class="ingredient decoy">Tomatoes</span>
-      <span class="ingredient decoy">Rice</span>
-      <span class="ingredient decoy">Onions</span>
-      <span class="ingredient decoy">Beef</span>
-      <span class="ingredient decoy">Salt</span>
-    </section>
-
-    <section class="input-box">
-      <input type="text" placeholder="Type an ingredient and press Enter" id="ingredientInput">
-      <button class="input-btn" id="addBtn">↑</button>
-    </section>
-
-    <section class="action">
-      <button class="generate-btn" id="generateBtn">Generate Recipes</button>
-      <div class="loading" id="loading">Cooking up a storm...</div>
-    </section>
+<nav class="navbar">
+  <div class="nav-brand">
+    <h1 class="nav-title">DishWhiz</h1>
   </div>
-
-    <div class="container">
-   <div class="results-section" style="display: none;">
-  <div class="results-header">
-    <h1>Your Recipes</h1>
-    <button class="back-btn" id="backBtn">Generate Another Recipe</button>
+  <div class="nav-links" id="navLinks">
+    <a href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#How_to">How To</a>
+    <a href="#Contact">Contact Us</a>
   </div>
+  <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+</nav>
 
-  <p class="intro-text" id="introText"></p>
-
-  <div class="recipe-cards" id="recipeCards"></div>
+<!-- Main Content -->
+<div class="container">
+  <section class="header">
+    <h1 class="logo">DishWhiz</h1>
+    <h2 class="subtitle">What type of recipe are you looking for today?</h2>
+  </section>
+  
+  <section class="recipe-types">
+    <button class="recipe-btn" data-type="South African Cuisine">South African Cuisine</button>
+    <button class="recipe-btn" data-type="Normal Recipe">Normal Recipe</button>
+    <button class="recipe-btn" data-type="Quick Recipe">Quick Recipe</button>
+  </section>
+  
+  <section class="ingredients">
+    <span class="ingredient decoy">Tomatoes</span>
+    <span class="ingredient decoy">Rice</span>
+    <span class="ingredient decoy">Onions</span>
+    <span class="ingredient decoy">Beef</span>
+    <span class="ingredient decoy">Salt</span>
+  </section>
+  
+  <section class="input-box">
+    <input type="text" placeholder="Type an ingredient and press Enter" id="ingredientInput">
+    <button class="input-btn" id="addBtn">↑</button>
+  </section>
+  
+  <section class="action">
+    <button class="generate-btn" id="generateBtn">Generate Recipes</button>
+    <div class="loading" id="loading">Cooking up a storm...</div>
+  </section>
 </div>
+
+<div class="container">
+  <div class="results-section" style="display: none;">
+    <div class="results-header">
+      <h1>Your Recipes</h1>
+      <button class="back-btn" id="backBtn">Generate Another Recipe</button>
+    </div>
+    <p class="intro-text" id="introText"></p>
+    <div class="recipe-cards" id="recipeCards"></div>
+  </div>
 </div>
 
-
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
