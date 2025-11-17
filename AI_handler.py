@@ -16,7 +16,7 @@ def build_prompt(ingredients_available, recipe_type):
     elif recipe_type == "Quick 5-minutes recipes":
         prompt += "Please give me 3 quick recipes (5-minutes prep) using these ingredients."
     else:
-        prompt += "Please give me 3 delicious recipes using these ingredients."
+        prompt += "Please give me 3 easy delicious recipes using these ingredients."
     
     context = "You are a helpful recipe generator that takes in ingredients from users as input and returns 3 recipe options in UK metrics with preparation steps in a markdown format"
  

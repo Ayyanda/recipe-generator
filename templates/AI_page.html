@@ -9,20 +9,21 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-brand">
-    <h1 class="nav-title">DishWhiz</h1>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="/">Home</a>
-    <a href="#about">About</a>
-    <a href="#How_to">How To</a>
-    <a href="#Contact">Contact Us</a>
-  </div>
-  <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-</nav>
+<header class="navbar">
+    <div class="nav-brand">
+      <img src="{{ url_for('static', filename='images/rectangle-2-9.png') }}" alt="DishWhiz Logo" class="nav-logo">
+      <span class="nav-title">DishWhiz</span>
+    </div>
 
-<!-- Main Content -->
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#about">About</a>
+      <a href="#How_to">How To</a>
+      <a href="#Contact">Contact Us</a>
+    </nav>
+  </header>
+
+
 <div class="container">
   <section class="header">
     <h1 class="logo">DishWhiz</h1>
