@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 from flask_cors import CORS
 from AI_handler import get_recipes
 
@@ -13,7 +13,27 @@ def index():
 
 @app.route("/ai")
 def ai_page():
-    return render_template("AI_page.html")
+    return render_template("input_page.html")
+
+@app.route("/results")
+def results_page():
+    return render_template("output_page.html")
+
+@app.route("/how-it-works")
+def how_it_works():
+    return render_template("how_it_works.html")
+
+@app.route("/saved-recipes")
+def saved_recipes():
+    return render_template("saved_recipes.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 @app.route("/generate", methods=["POST"])
 def generate():

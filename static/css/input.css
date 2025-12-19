@@ -1,0 +1,218 @@
+/* ==================== INPUT PAGE STYLES ==================== */
+
+body:has(.header) {
+  padding-top: 80px;
+}
+
+/* Container for input form */
+.container:has(.header) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.header {
+  width: 100%;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.recipe-types {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.recipe-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--purple);
+  border-radius: 30px;
+  background: var(--light-gray);
+  color: var(--purple);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.recipe-btn:hover {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.recipe-btn.active {
+  background: var(--purple);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.ingredients {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  min-height: 50px;
+}
+
+.ingredient {
+  background: var(--purple);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ingredient.decoy {
+  opacity: 0.6;
+}
+
+.ingredient .remove-btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.ingredient .remove-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--purple);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
+.input-btn {
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-btn:hover {
+  background: var(--light-purple);
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.generate-btn {
+  display: inline-block;
+  width: 100%; 
+  max-width: 500px; 
+  padding: 1rem;
+  background: var(--purple);
+  color: var(--white);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-btn:hover {
+  background: var(--light-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(112, 5, 112, 0.3);
+}
+
+.generate-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading {
+  display: none;
+  margin-top: 1rem;
+  color: var(--purple);
+  font-size: 1.1rem;
+}
+
+.loading.active {
+  display: block;
+}
+
+/* ==================== Mobile Responsive - Input Page ==================== */
+@media (max-width: 768px) {
+  body:has(.header) {
+    padding-top: 70px;
+  }
+
+  .container:has(.header) {
+    min-height: calc(100vh - 70px);
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .recipe-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .generate-btn {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}

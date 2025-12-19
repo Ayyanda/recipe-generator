@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saved Recipes - DishWhiz</title>
+<link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ai-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-brand">
+      <img src="{{ url_for('static', filename='images/rectangle-2-9.png') }}" alt="DishWhiz Logo" class="nav-logo">
+      <span class="nav-title">DishWhiz</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/ai">Generate Recipe</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/saved-recipes" class="active">Saved Recipes</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+<div class="container page-container">
+  <section class="page-header">
+    <h1>Your Saved Recipes</h1>
+    <p class="page-subtitle">Your favorite recipes in one place</p>
+  </section>
+
+  <div class="empty-state">
+    <div class="empty-icon"></div>
+    <h2>No Saved Recipes Yet</h2>
+    <p>Start generating recipes and save your favorites to see them here!</p>
+    <a href="/ai" class="cta-button">Generate Your First Recipe</a>
+  </div>
+
+</body>
+</html>

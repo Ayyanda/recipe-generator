@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works - DishWhiz</title>
+<link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ai-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-brand">
+      <img src="{{ url_for('static', filename='images/rectangle-2-9.png') }}" alt="DishWhiz Logo" class="nav-logo">
+      <span class="nav-title">DishWhiz</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/ai">Generate Recipe</a>
+      <a href="/how-it-works" class="active">How It Works</a>
+      <a href="/saved-recipes">Saved Recipes</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+<div class="container page-container">
+  <section class="page-header">
+    <h1>How It Works</h1>
+    <p class="page-subtitle">Generate delicious recipes in just 3 simple steps</p>
+  </section>
+
+  <section class="steps-section">
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <h3>Select Recipe Type</h3>
+      <p>Choose from South African Cuisine, Normal Recipe, or Quick Recipe options based on your preference and available time.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <h3>Add Ingredients</h3>
+      <p>Enter the ingredients you have available. You can add as many ingredients as you'd like by typing and pressing Enter or clicking the add button.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <h3>Generate Recipes</h3>
+      <p>Click "Generate Recipes" and our AI will create customized recipes based on your ingredients and selected recipe type. Results appear instantly!</p>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <h2>Key Features</h2>
+    <ul class="features-list">
+      <li>AI-powered recipe generation</li>
+      <li>Mobile-friendly interface</li>
+      <li>Save your favorite recipes (coming soon)</li>
+      <li>Diverse cuisine options</li>
+    </ul>
+  </section>
+
+  <div class="cta-section">
+    <a href="/ai" class="cta-button">Start Generating Recipes</a>
+  </div>
+</div>
+
+</body>
+</html>

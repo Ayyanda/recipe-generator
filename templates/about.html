@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About DishWhiz</title>
+<link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ai-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-brand">
+      <img src="{{ url_for('static', filename='images/rectangle-2-9.png') }}" alt="DishWhiz Logo" class="nav-logo">
+      <span class="nav-title">DishWhiz</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/ai">Generate Recipe</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/saved-recipes">Saved Recipes</a>
+      <a href="/about" class="active">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+<div class="container page-container">
+  <section class="page-header">
+    <h1>About DishWhiz</h1>
+    <p class="page-subtitle">AI-powered recipe generation at your fingertips</p>
+  </section>
+
+  <section class="about-content">
+    <div class="about-section">
+      <h2>Our Mission</h2>
+      <p>DishWhiz is designed to make cooking easier and more enjoyable. By combining artificial intelligence with culinary expertise, we help you discover creative recipes based on the ingredients you have at home.</p>
+    </div>
+
+    <div class="about-section">
+      <h2>Why DishWhiz?</h2>
+      <ul class="benefits-list">
+        <li><strong>Save Time:</strong> No more browsing countless recipe websites</li>
+        <li><strong>Reduce Waste:</strong> Use ingredients you already have</li>
+        <li><strong>Discover New Dishes:</strong> Explore recipes from diverse cuisines</li>
+        <li><strong>Easy to Use:</strong> Simple, intuitive interface</li>
+        <li><strong>AI-Powered:</strong> Smart recipe suggestions tailored to you</li>
+      </ul>
+    </div>
+
+    <div class="about-section">
+      <h2>How We Work</h2>
+      <p>DishWhiz uses advanced AI technology to analyze your ingredients and generate personalized recipes. Whether you're looking for South African cuisine, quick meals, or traditional recipes, our system adapts to your preferences and needs.</p>
+    </div>
+  </section>
+
+  <div class="cta-section">
+    <a href="/ai" class="cta-button">Start Cooking Today</a>
+  </div>
+</div>
+
+</body>
+</html>

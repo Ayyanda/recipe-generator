@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DishWhiz - Your Recipes</title>
+<link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ai-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-brand">
+      <img src="{{ url_for('static', filename='images/rectangle-2-9.png') }}" alt="DishWhiz Logo" class="nav-logo">
+      <span class="nav-title">DishWhiz</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/ai" class="active">Generate Recipe</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/saved-recipes">Saved Recipes</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+<div class="container">
+  <div class="results-section">
+    <div class="results-header">
+      <h1>Your Recipes</h1>
+      <button class="back-btn" id="backBtn">Generate Another Recipe</button>
+    </div>
+    <p class="intro-text" id="introText"></p>
+    <div class="recipe-cards" id="recipeCards"></div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/output-script.js') }}"></script>
+</body>
+</html>
