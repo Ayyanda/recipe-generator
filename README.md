@@ -174,20 +174,13 @@ Never commit `.env` to version control!
 
 ## 📧 Contact & Support
 
-- **Email:** support@dishwhiz.com
+- **Email:** [coming soon]
 - **Website:** [Coming soon]
 - **Issues:** Please report bugs via GitHub Issues
 
 Visit the Contact page in the app for more ways to reach us!
 
 ---
-
-## Project Structure
-    - main.py – Main app logic and flow
-    - AI_handler.py – Handles communication with SheCodes AI API
-    - .env – Stores your API key securely
-    - requirements.txt – Project dependencies
-    - README.md – You’re reading it
 
 
 ## Setting Up your SheCodes AI API Key
@@ -201,8 +194,6 @@ Visit the Contact page in the app for more ways to reach us!
 - shecodes-ai
 - python-dotenv
 
-## Future Improvements
-    - Save favorite recipes to a file
 
 
 
